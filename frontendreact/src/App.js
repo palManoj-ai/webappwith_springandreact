@@ -12,8 +12,9 @@ function App() {
       <Router>
       <HeaderComponent/>
       <div className="container">
+        {/* Switch is deprecated by Routes */}
         <Switch>
-          {/*frontend localhost:3000/ or localhost:3000/employees will render listemployeecomponent.js*/}
+          {/*frontend localhost:3000/ or localhost:3000/employees will render the component listemployeecomponent.js*/}
           <Route exact path="/" component={ListEmployeeComponent}></Route>
           <Route path="/allemployees" component={ListEmployeeComponent}></Route>
           <Route path="/add-employee" component={AddEmployeeComponent}></Route>

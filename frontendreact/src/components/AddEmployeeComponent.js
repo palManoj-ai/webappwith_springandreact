@@ -3,7 +3,12 @@ import React from 'react'
 import {Link, useHistory,useParams} from 'react-router-dom';
 import EmployeeService from "../services/EmployeeService"
 
-//usestate, useparams, usehistory are hooks 
+
+//usestate, useparams, usehistory are react-hooks
+//hooks are functions that help get react functionality
+//usestate is react hook that returns tuple of state and function that lets us update the state
+//useparams to access URL parameters of the current route
+//usehistory helps us access history object used to navigate to other routes
 
 
 const AddEmployeeComponent = () => {
@@ -26,7 +31,7 @@ const AddEmployeeComponent = () => {
             console.log(response.data)
             history.push("/allemployees");
             //after posting employee second page should be all employees listed one
-            //history object is used to navigate
+            //history object is used to navigate/redirect to page
         }).catch(error =>{
             console.log(error)
         })
@@ -66,6 +71,7 @@ const AddEmployeeComponent = () => {
                 <div className="card col-md-6 offset-md-3 offset-md-3 ">
                 <h2> Employee Registration  </h2>
                 <div className="card-body">
+                    {/* User login form */}
                     <form>
                         <div className="form-group mb-2">
                         <label className="form-label"> First Name:</label>
